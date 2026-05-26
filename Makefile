@@ -15,3 +15,18 @@ fmt:
 
 validate:
 	cd terraform && terraform validate
+
+ansible-install:
+	ansible-galaxy install -r ansible/requirements.yml
+
+setup:
+	ansible-playbook -i ansible/inventory.ini ansible/playbook.yml --tags setup --ask-pass
+
+setup-balancer:
+	
+
+deploy:
+	ansible-playbook -i ansible/inventory.ini ansible/playbook.yml --tags deploy --ask-pass
+
+provision:
+	ansible-playbook -i ansible/inventory.ini ansible/playbook.yml

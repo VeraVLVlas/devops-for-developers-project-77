@@ -1,6 +1,12 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/VeraVLVlas/devops-for-developers-project-77/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/VeraVLVlas/devops-for-developers-project-77/actions)
 
+## Public URL
+
+https://devops.crazucatts.online
+
+The application is exposed through Cloudflare Tunnel and is available over HTTPS.
+
 
 # DevOps For Developers Project
 Local Infrastructure as Code project using Terraform, Ansible, Docker, and Oracle VirtualBox.
@@ -13,12 +19,28 @@ The project creates:
 - Dockerized application deployment
 - Local VirtualBox infrastructure managed by Terraform
 
+
 ## Technologies
-- Terraform
-- Ansible
-- Docker
-- Nginx
-- Oracle VirtualBox
+- Terraform — infrastructure provisioning
+- Ansible — server configuration and deployment
+- Docker — application containerization
+- Nginx — load balancing
+- Oracle VirtualBox — local virtual infrastructure
+- Cloudflare Tunnel — secure public HTTPS access to local infrastructure
+
+
+## Architecture
+```text
+Internet
+    ↓
+Cloudflare Tunnel
+    ↓
+Nginx Load Balancer
+    ↓
+Web Server 1 (Docker)
+Web Server 2 (Docker)
+```
+
 
 ## Project Structure
 ```text

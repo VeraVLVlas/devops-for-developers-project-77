@@ -30,3 +30,6 @@ deploy:
 
 provision:
 	ansible-playbook -i ansible/inventory.ini ansible/playbook.yml
+
+monitoring:
+	ansible-playbook -i ansible/inventory.ini ansible/playbook.yml --tags monitoring --ask-pass --ask-vault-pass

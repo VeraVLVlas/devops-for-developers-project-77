@@ -27,6 +27,7 @@ The project creates:
 - Nginx — load balancing
 - Oracle VirtualBox — local virtual infrastructure
 - Cloudflare Tunnel — secure public HTTPS access to local infrastructure
+- Datadog
 
 
 ## Architecture
@@ -96,3 +97,9 @@ make provision
 ## Application
 The application is deployed as a Docker container.
 Docker image used: traefik/whoami
+
+## Monitoring
+Datadog Agent is installed on all virtual machines.
+Application availability is monitored using Datadog Synthetic Tests.
+
+Monitored URL: https://devops.crazucatts.online

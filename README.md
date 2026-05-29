@@ -28,6 +28,7 @@ The project creates:
 - Oracle VirtualBox — local virtual infrastructure
 - Cloudflare Tunnel — secure public HTTPS access to local infrastructure
 - Datadog
+- Upmon availability monitoring
 
 
 ## Architecture
@@ -103,3 +104,7 @@ Datadog Agent is installed on all virtual machines.
 Application availability is monitored using Datadog Synthetic Tests.
 
 Monitored URL: https://devops.crazucatts.online
+
+## External Availability Monitoring
+External availability monitoring is configured using Upmon.
+The project sends heartbeat pings to Upmon, which alerts if the application becomes unavailable or stops reporting within the configured period.
